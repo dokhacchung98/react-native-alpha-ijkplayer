@@ -15,7 +15,7 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 
 public class RCTAlphaIJKPlayerViewManager extends ViewGroupManager<RCTIJKPlayerView> {
-  private static final String REACT_CLASS = "AlphaIJKPlayer";
+  private static final String REACT_CLASS = "AlphaIjkplayerView";
 
   public static final String REACT_ON_VIDEO_PROGRESS = "onVideoProgressRN";
   public static final String REACT_ON_VIDEO_PREPARE = "onVideoPrepareRN";

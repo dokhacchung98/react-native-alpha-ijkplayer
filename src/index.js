@@ -29,7 +29,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.releaseVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.releaseVideo,
         [],
       );
     } catch (er) {
@@ -41,7 +41,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.stopVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.stopVideo,
         [],
       );
     } catch (er) {
@@ -56,7 +56,7 @@ class RNAlphaIjkplayerView extends React.Component {
       // this.releaseVideo();
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.startVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.startVideo,
         [url],
       );
     } catch (er) {
@@ -68,7 +68,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.pauseVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.pauseVideo,
         [],
       );
     } catch (er) {
@@ -80,7 +80,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.resumeVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.resumeVideo,
         [],
       );
     } catch (er) {
@@ -92,7 +92,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.changeVolume,
+        UIManager?.AlphaIjkplayerView?.Commands?.changeVolume,
         [volume],
       );
     } catch (er) {
@@ -104,7 +104,7 @@ class RNAlphaIjkplayerView extends React.Component {
     try {
       UIManager.dispatchViewManagerCommand(
         ReactNative.findNodeHandle(this._root),
-        UIManager?.AlphaIJKPlayer?.Commands?.seekVideo,
+        UIManager?.AlphaIjkplayerView?.Commands?.seekVideo,
         [t],
       );
     } catch (er) {
@@ -141,7 +141,7 @@ class RNAlphaIjkplayerView extends React.Component {
 
   render() {
     return (
-      <AlphaIJKPlayer
+      <AlphaIjkplayerView
         {...this.props}
         onVideoCompleteRN={this.props?.onVideoComplete}
         onVideoPrepareRN={this.props?.onVideoPrepare}
@@ -165,7 +165,7 @@ RNAlphaIjkplayerView.propTypes = {
   onVideoInfo: PropTypes.func,
 };
 
-var AlphaIJKPlayer = requireNativeComponent('AlphaIJKPlayer', RNAlphaIjkplayerView, {
+var AlphaIjkplayerView = requireNativeComponent('AlphaIjkplayerView', RNAlphaIjkplayerView, {
   nativeOnly: {
     onVideoProgressRN: true,
     onVideoPrepareRN: true,
